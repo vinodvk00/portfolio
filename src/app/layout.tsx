@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
+import { JetBrains_Mono, Inter } from "next/font/google";
 
+const jetbrains = JetBrains_Mono({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,10 +18,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html lang="en" suppressHydrationWarning>
             <body className={inter.className}>
                 <Header />
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
