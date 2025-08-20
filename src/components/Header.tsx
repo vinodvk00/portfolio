@@ -1,19 +1,21 @@
-import Link from "next/link";
+import Link from 'next/link';
+
 import {
-    CircleUserRound,
     Briefcase,
-    Newspaper,
+    CircleUserRound,
     Library,
     Mail,
-} from "lucide-react";
+    Newspaper,
+} from 'lucide-react';
 
 export const Header = () => {
     return (
-        <header className="flex items-center justify-between p-4 mx-4 md:p-6">
+        <header className="mx-24 flex items-center justify-between p-4 text-lg md:p-6">
             {/* Logo */}
             <Link
                 href="/"
-                className="font-bold text-xl tracking-widest uppercase hover:text-gray-300">
+                className="text-2xl font-bold tracking-widest uppercase hover:text-gray-300"
+            >
                 VK
             </Link>
 
@@ -23,7 +25,8 @@ export const Header = () => {
                     <li>
                         <Link
                             href="/#about"
-                            className="flex items-center gap-2 hover:text-gray-300">
+                            className="flex items-center gap-2 hover:text-gray-300"
+                        >
                             <CircleUserRound className="h-4 w-4" />
                             About
                         </Link>
@@ -31,7 +34,8 @@ export const Header = () => {
                     <li>
                         <Link
                             href="/#projects"
-                            className="flex items-center gap-2 hover:text-gray-300">
+                            className="flex items-center gap-2 hover:text-gray-300"
+                        >
                             <Briefcase className="h-4 w-4" />
                             Project
                         </Link>
@@ -39,7 +43,8 @@ export const Header = () => {
                     <li>
                         <Link
                             href="/#blog"
-                            className="flex items-center gap-2 hover:text-gray-300">
+                            className="flex items-center gap-2 hover:text-gray-300"
+                        >
                             <Newspaper className="h-4 w-4" />
                             Blog
                         </Link>
@@ -47,7 +52,8 @@ export const Header = () => {
                     <li>
                         <Link
                             href="/#resources"
-                            className="flex items-center gap-2 hover:text-gray-300">
+                            className="flex items-center gap-2 hover:text-gray-300"
+                        >
                             <Library className="h-4 w-4" />
                             Resources
                         </Link>
@@ -55,7 +61,8 @@ export const Header = () => {
                     <li>
                         <Link
                             href="/#contact"
-                            className="flex items-center gap-2 hover:text-gray-300">
+                            className="flex items-center gap-2 hover:text-gray-300"
+                        >
                             <Mail className="h-4 w-4" />
                             Contact
                         </Link>
