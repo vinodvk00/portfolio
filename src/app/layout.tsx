@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
 
-const jetbrains = JetBrains_Mono({ subsets: ['latin'] });
+// const jetbrains = JetBrains_Mono({ subsets: ['latin'] });
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
-                    enableSystem
+                    // enableSystem
                     disableTransitionOnChange
                 >
                     {children}

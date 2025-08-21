@@ -1,5 +1,10 @@
 import { Github, Hand, Linkedin, Mail } from 'lucide-react';
 
+import Blog from '@/components/blog/Blog';
+import Projects from '@/components/projects/Project';
+import WorkExperience from '@/components/work/WorkSection';
+import Contact from '@/components/contact/Contact';
+
 export default function Home() {
     return (
         <main className="mx-24 min-h-screen px-6 py-20 font-mono text-gray-200">
@@ -17,7 +22,7 @@ export default function Home() {
                         </div>
                         I&apos;m Vinod
                     </h1>
-                    <p className="mt-6 text-2xl leading-relaxed md:mt-0 md:w-2/3">
+                    <div className="mt-6 text-2xl leading-relaxed md:mt-0 md:w-2/3">
                         {/* A{" "}
                         <span className="text-white font-semibold">
                             Software Engineer
@@ -39,7 +44,7 @@ export default function Home() {
                             purposeful frontends that make complex functionality
                             feel effortless
                         </div>
-                    </p>
+                    </div>
                 </div>
 
                 {/* Social Links */}
@@ -68,103 +73,13 @@ export default function Home() {
             </section>
 
             {/* Work/Projects Section */}
-            <section className="mt-24">
-                <h2 className="mb-6 text-sm text-gray-500">~/work/projects</h2>
+            <Projects />
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {/* MAMS */}
-                    <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700 hover:bg-gray-800">
-                        <h3 className="text-lg font-semibold text-white">
-                            Military Asset Management System (MAMS)
-                        </h3>
-                        <p className="mt-2 text-sm text-gray-400">
-                            Full-stack MERN app for managing military assets,
-                            purchases, transfers, and expenditures with{' '}
-                            <span className="font-medium text-white">
-                                RBAC, dashboards, and audit logging
-                            </span>
-                            . Deployed live with demo access.
-                        </p>
-                        <div className="mt-4 flex gap-3">
-                            <a
-                                href="https://mams.beyondlocalhost.space"
-                                target="_blank"
-                                className="text-blue-400 hover:underline"
-                            >
-                                Live Demo
-                            </a>
-                            <a
-                                href="https://github.com/vinodvk00/MAMS"
-                                target="_blank"
-                                className="text-blue-400 hover:underline"
-                            >
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+            <WorkExperience />
 
-                    {/* ReachInbox */}
-                    <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700 hover:bg-gray-800">
-                        <h3 className="text-lg font-semibold text-white">
-                            ReachInbox
-                        </h3>
-                        <p className="mt-2 text-sm text-gray-400">
-                            Email outreach platform with{' '}
-                            <span className="font-medium text-white">
-                                multi-step campaigns, inbox rotation, warm-up
-                            </span>{' '}
-                            and{' '}
-                            <span className="font-medium text-white">
-                                analytics for high deliverability
-                            </span>
-                            . Built for collaboration and scalability.
-                        </p>
-                        <div className="mt-4 flex gap-3">
-                            <a
-                                href="https://github.com/vinodvk00/reachinbox"
-                                target="_blank"
-                                className="text-blue-400 hover:underline"
-                            >
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
+            <Blog />
 
-                    {/* BeyondLocalhost */}
-                    <div className="rounded-2xl border border-gray-800 bg-gray-900 p-6 transition hover:border-gray-700 hover:bg-gray-800">
-                        <h3 className="text-lg font-semibold text-white">
-                            BeyondLocalhost
-                        </h3>
-                        <p className="mt-2 text-sm text-gray-400">
-                            Full-stack blog app built with{' '}
-                            <span className="font-medium text-white">
-                                Node.js, Express, MongoDB, React, JWT, Redux
-                            </span>
-                            . Features{' '}
-                            <span className="font-medium text-white">
-                                secure auth, CRUD blogs, responsive UI
-                            </span>
-                            , and deployed on production.
-                        </p>
-                        <div className="mt-4 flex gap-3">
-                            <a
-                                href="https://beyondlocalhost.space"
-                                target="_blank"
-                                className="text-blue-400 hover:underline"
-                            >
-                                Live Demo
-                            </a>
-                            <a
-                                href="https://github.com/vinodvk00/beyondlocalhost"
-                                target="_blank"
-                                className="text-blue-400 hover:underline"
-                            >
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Contact />
         </main>
     );
 }
