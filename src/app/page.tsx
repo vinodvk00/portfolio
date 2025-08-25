@@ -1,15 +1,15 @@
 import { Github, Hand, Linkedin, Mail } from 'lucide-react';
 
 import Blog from '@/components/blog/Blog';
+import Contact from '@/components/contact/Contact';
 import Projects from '@/components/projects/Project';
 import WorkExperience from '@/components/work/WorkSection';
-import Contact from '@/components/contact/Contact';
 
 export default function Home() {
     return (
         <main className="mx-24 min-h-screen px-6 py-20 font-mono text-gray-200">
             {/* Hero Section */}
-            <section className="">
+            <section id="about" className="scroll-mt-36">
                 <div className="flex flex-col pb-8 md:flex-row md:items-start md:justify-between">
                     <h1 className="text-4xl font-bold text-white md:w-1/3 md:text-6xl">
                         <div className="mb-4 flex">

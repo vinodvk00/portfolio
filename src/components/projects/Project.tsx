@@ -66,7 +66,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="mt-24">
+        <section id="projects" className="mt-24 scroll-mt-36">
             <h2 className="mb-6 text-sm text-gray-500">~/work/projects</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project, index) => (

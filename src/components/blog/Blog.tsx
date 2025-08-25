@@ -29,14 +29,14 @@ const blogPosts: BlogPost[] = [
 
 export const Blog = () => {
     return (
-        <section className="mt-24">
+        <section id="blog" className="mt-24 scroll-mt-36">
             <h2 className="mb-6 text-sm text-gray-500">
                 ~/blog/documentations
             </h2>
 
             <div className="space-y-4 text-xl">
                 {blogPosts.map((post, index) => (
-                    <div key={index} className="group flex gap-3">
+                    <div key={index} className="group flex items-center gap-3">
                         <BookOpen
                             size={16}
                             className={`${post.isBookmarked ? 'text-yellow-400' : 'text-gray-500'} flex-shrink-0`}
@@ -45,7 +45,7 @@ export const Blog = () => {
                             href={post.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className=" text-white transition-colors hover:text-gray-300"
+                            className="text-white transition-colors hover:text-gray-300"
                         >
                             {post.title}
                         </a>

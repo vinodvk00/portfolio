@@ -10,7 +10,7 @@ import {
 
 export const Header = () => {
     return (
-        <header className="mx-24 flex items-center justify-between p-4 text-lg md:p-6">
+        <header className="sticky top-0 right-0 left-0 z-50 mx-24 flex items-center justify-between p-4 text-lg md:p-6">
             {/* Logo */}
             <Link
                 href="/"
